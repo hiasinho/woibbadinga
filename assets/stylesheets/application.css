@@ -821,25 +821,42 @@ body {
 
 /* line 71, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .cover {
+  position: relative;
   background-image: url("../images/apfel.jpg"); }
-  /* line 74, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  /* line 75, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
   .cover h1 {
     font-size: 5.0rem;
     font-weight: 600;
-    line-height: 1.15; }
+    line-height: 1.15;
+    color: #fff;
+    border-color: #fff;
+    z-index: 1; }
     @media screen and (min-width: 550px) {
-      /* line 74, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+      /* line 75, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
       .cover h1 {
         font-size: 6.0rem; } }
+  /* line 91, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  .cover video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity; }
 
-/* line 88, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+/* line 107, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .orange {
   background-image: url("../images/orange.jpg"); }
 
-/* line 92, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+/* line 111, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .paprika {
   background-image: url("../images/paprika.jpg"); }
-  /* line 94, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  /* line 113, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
   .paprika h2 {
     color: #fff;
     border-color: #fff; }
