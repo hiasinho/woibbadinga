@@ -9696,7 +9696,7 @@ return jQuery;
   });
 
   $('#bgVideo').vide({
-    mp4: '/woibbadinga/assets../images/vb.mp4'
+    mp4: '/woibbadinga/assets/images/vb.mp4'
   }, {
     volume: 0,
     playbackRate: 0.5,
