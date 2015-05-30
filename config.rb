@@ -12,7 +12,7 @@ set :layout, 'layouts/application'
 
 sprockets.append_path File.join root, 'bower_components'
 sprockets.import_asset 'jquery'
-# sprockets.import_asset 'typeplate-starter-kit'
+sprockets.import_asset 'vide'
 
 configure :development do
  activate :livereload

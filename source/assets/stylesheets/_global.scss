@@ -69,12 +69,16 @@ body {
 }
 
 .cover {
+  position: relative;
   background-image: image-url('apfel.jpg');
 
   h1 {
     font-size: 5.0rem;
     font-weight: 600;
     line-height: 1.15;
+    color: #fff;
+    border-color: #fff;
+    z-index: 1;
     @include media($phablet-up) {
       font-size: 6.0rem;
     }
@@ -82,6 +86,21 @@ body {
 
   h2 {
 
+  }
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%);
+    // background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
   }
 }
 
