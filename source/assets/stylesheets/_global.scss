@@ -102,6 +102,16 @@ body {
     background-size: cover;
     transition: 1s opacity;
   }
+
+  .down {
+    color: white;
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      text-align: center;
+  }
 }
 
 .orange {
