@@ -9695,10 +9695,8 @@ return jQuery;
     }
   });
 
-  debugger;
-
   $('#bgVideo').vide({
-    mp4: '/assets/images/vb.mp4'
+    mp4: '../images/vb.mp4'
   }, {
     volume: 0,
     playbackRate: 0.5,
