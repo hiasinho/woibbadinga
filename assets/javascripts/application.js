@@ -9699,7 +9699,7 @@ return jQuery;
     mp4: '/woibbadinga/assets/images/vb.mp4'
   }, {
     volume: 0,
-    playbackRate: 0.5,
+    playbackRate: 1,
     muted: true,
     loop: true,
     autoplay: true,
