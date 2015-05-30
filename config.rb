@@ -10,6 +10,10 @@ set :images_dir, 'assets/images'
 set :fonts_dir, 'assets/fonts'
 set :layout, 'layouts/application'
 
+sprockets.append_path File.join root, 'bower_components'
+sprockets.import_asset 'jquery'
+# sprockets.import_asset 'typeplate-starter-kit'
+
 configure :development do
  activate :livereload
 end

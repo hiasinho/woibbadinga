@@ -1,19 +1,99 @@
 body {
-  background-color: $light-gray;
-  color: $medium-gray;
+  background-color: white;
+  color: $dark-grey;
 }
 
-.delete-me {
-  @include align-items(center);
-  @include display(flex);
-  @include justify-content(center);
-  height: 100vh;
+// Grid
+//––––––––––––––––––––––––––––––––––––––––––––––––––
 
-  .container {
-    text-align: center;
+.center {
+  text-align: center;
+}
 
-    h1 {
-      font-weight: 200;
+.left {
+  text-align: center;
+}
+
+.container {
+  @include outer-container;
+  box-sizing: border-box;
+
+  &:not(:first-child) {
+    margin-top: 5rem;
+  }
+}
+
+.columns {
+  &.three {
+    > div {
+      @include span-columns(4);
     }
   }
 }
+
+.page {
+  @include align-items(stretch);
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(flex-start);
+
+  > .full {
+    @include flex(1);
+    min-height: 100vh;
+  }
+}
+
+.section-image {
+  @include align-items(center);
+  @include display(flex);
+  @include justify-content(center);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  h1, h2 {
+    padding: 20px;
+    max-width: 50%;
+    border: 5px solid $dark-grey;
+    text-transform: uppercase;
+  }
+}
+
+.section-text {
+  padding: 120px 0;
+
+  h1, h2, h3, h4 {
+    text-align: center;
+  }
+}
+
+.cover {
+  background-image: image-url('apfel.jpg');
+
+  h1 {
+    font-size: 5.0rem;
+    font-weight: 600;
+    line-height: 1.15;
+    @include media($phablet-up) {
+      font-size: 6.0rem;
+    }
+  }
+
+  h2 {
+
+  }
+}
+
+.orange {
+  background-image: image-url('orange.jpg');
+}
+
+.paprika {
+  background-image: image-url('paprika.jpg');
+  h2 {
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
