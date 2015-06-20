@@ -397,11 +397,11 @@ td,
 th {
   padding: 0; }
 
-/* line 4, /Users/hiasdo/.rvm/gems/ruby-2.1.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+/* line 4, /Users/hiasdo/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
   box-sizing: border-box; }
 
-/* line 9, /Users/hiasdo/.rvm/gems/ruby-2.1.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+/* line 9, /Users/hiasdo/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
 *, *::after, *::before {
   box-sizing: inherit; }
 
@@ -5291,181 +5291,122 @@ Copyright (c) 2015 Daniel Eden
 /* line 1, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 body {
   background-color: white;
-  color: #333; }
+  color: #333;
+  overflow-x: hidden; }
 
-/* line 9, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+/* line 10, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .center {
   text-align: center; }
 
-/* line 13, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+/* line 14, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .left {
   text-align: center; }
 
-/* line 17, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+/* line 18, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .container {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box; }
-  /* line 20, /Users/hiasdo/.rvm/gems/ruby-2.1.2/gems/bourbon-4.2.3/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 20, /Users/hiasdo/.rvm/gems/ruby-2.2.2/gems/bourbon-4.2.3/app/assets/stylesheets/addons/_clearfix.scss */
   .container::after {
     clear: both;
     content: "";
     display: table; }
-  /* line 21, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-  .container:not(:first-child) {
-    margin-top: 5rem; }
 
-/* line 28, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+/* line 25, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+.section {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: #ccc;
+  min-height: 280px;
+  overflow: hidden; }
+  /* line 20, /Users/hiasdo/.rvm/gems/ruby-2.2.2/gems/bourbon-4.2.3/app/assets/stylesheets/addons/_clearfix.scss */
+  .section::after {
+    clear: both;
+    content: "";
+    display: table; }
+  /* line 32, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  .section:nth-child(2n) {
+    background-color: #eee; }
+  /* line 36, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  .section .section-image, .section .section-text {
+    width: 100%;
+    min-height: 280px;
+    padding: 20px; }
+  /* line 42, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  .section .section-image {
+    background-image: url("http://lorempixel.com/500/400/food/2");
+    background-position: center;
+    background-size: cover; }
+    @media screen and (min-width: 750px) {
+      /* line 42, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+      .section .section-image {
+        display: table-cell;
+        width: 50%; } }
+  @media screen and (min-width: 750px) {
+    /* line 53, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+    .section .section-text {
+      display: table-cell;
+      width: 50%; } }
+
+/* line 62, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+header.section {
+  background-image: url("http://lorempixel.com/1200/500/food/4");
+  background-position: center;
+  background-size: cover; }
+  /* line 67, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  header.section h1 {
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+    width: 100%; }
+
+/* line 79, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+.collapse-container {
+  position: relative;
+  min-height: 280px; }
+
+/* line 84, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+.collapse-item {
+  position: absolute;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+  background-color: white; }
+  /* line 91, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  .collapse-item.open {
+    position: relative;
+    display: block;
+    min-height: initial;
+    height: 150px; }
+    /* line 97, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+    .collapse-item.open:hover {
+      opacity: 0.8;
+      cursor: pointer; }
+    /* line 102, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+    .collapse-item.open p {
+      display: none; }
+  /* line 107, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  .collapse-item.closed {
+    display: none; }
+
+/* line 112, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+.collapse-control {
+  min-height: inherit;
+  height: 50px; }
+
+/* line 119, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .columns.three > div {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%; }
-  /* line 89, /Users/hiasdo/.rvm/gems/ruby-2.1.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  /* line 89, /Users/hiasdo/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
   .columns.three > div:last-child {
     margin-right: 0; }
-
-/* line 34, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-.page {
-  -webkit-box-align: stretch;
-  -moz-box-align: stretch;
-  box-align: stretch;
-  -webkit-align-items: stretch;
-  -moz-align-items: stretch;
-  -ms-align-items: stretch;
-  -o-align-items: stretch;
-  align-items: stretch;
-  -ms-flex-align: stretch;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-direction: column;
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  box-pack: start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  -o-justify-content: flex-start;
-  justify-content: flex-start;
-  -ms-flex-pack: start; }
-  /* line 40, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-  .page > .full {
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    box-flex: 1;
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    min-height: 100vh; }
-
-/* line 46, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-.section-image {
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-  /* line 55, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-  .section-image h1, .section-image h2 {
-    padding: 20px;
-    max-width: 50%;
-    border: 5px solid #333;
-    text-transform: uppercase; }
-
-/* line 63, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-.section-text {
-  padding: 120px 0; }
-  /* line 66, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-  .section-text h1, .section-text h2, .section-text h3, .section-text h4 {
-    text-align: center; }
-
-/* line 71, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-.cover {
-  position: relative;
-  background-image: url("../images/apfel.jpg"); }
-  /* line 75, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-  .cover h1 {
-    font-size: 5.0rem;
-    font-weight: 600;
-    line-height: 1.15;
-    color: #fff;
-    border-color: #fff;
-    z-index: 1; }
-    @media screen and (min-width: 550px) {
-      /* line 75, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-      .cover h1 {
-        font-size: 6.0rem; } }
-  /* line 91, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-  .cover video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    transform: translateX(-50%) translateY(-50%);
-    background-size: cover;
-    transition: 1s opacity; }
-  /* line 106, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-  .cover .down {
-    color: white;
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    text-align: center; }
-
-/* line 117, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-.orange {
-  background-image: url("../images/orange.jpg"); }
-
-/* line 121, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-.paprika {
-  background-image: url("../images/paprika.jpg"); }
-  /* line 123, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-  .paprika h2 {
-    color: #fff;
-    border-color: #fff; }
