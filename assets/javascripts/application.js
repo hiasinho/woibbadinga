@@ -13185,7 +13185,7 @@ return jQuery;
   var CollapseView, SectionView, animationEndEvents, cv;
 
   $('#bgVideo').vide({
-    mp4: '/assets/images/vb.mp4'
+    mp4: '/woibbadinga/assets/images/vb.mp4'
   }, {
     volume: 0,
     playbackRate: 1,
