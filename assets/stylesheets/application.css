@@ -5499,30 +5499,23 @@ body {
 
 /* line 229, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .section-footer {
-  height: 600px;
   background-color: #333;
   color: white; }
-
-/* line 237, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-.columns.two > div {
-  padding: 20px; }
-  @media screen and (min-width: 750px) {
-    /* line 237, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-    .columns.two > div {
-      width: 50%;
-      display: inline-block; }
-      /* line 244, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-      .columns.two > div:nth-child(1) {
-        float: left; }
-      /* line 248, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-      .columns.two > div:nth-child(2) {
-        float: right; } }
-/* line 255, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
-.columns.three > div {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  /* line 89, /Users/hiasdo/.rvm/gems/ruby-2.2.2/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
-  .columns.three > div:last-child {
-    margin-right: 0; }
+  /* line 234, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  .section-footer > div {
+    padding: 20px; }
+    @media screen and (min-width: 750px) {
+      /* line 234, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+      .section-footer > div {
+        width: 50%;
+        display: inline-block; }
+        /* line 241, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+        .section-footer > div:nth-child(1) {
+          float: left; }
+        /* line 245, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+        .section-footer > div:nth-child(2) {
+          float: right; }
+        /* line 249, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+        .section-footer > div:nth-child(3) {
+          width: 100%;
+          clear: both; } }
