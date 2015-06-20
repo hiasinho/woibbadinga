@@ -12714,15 +12714,16 @@ return jQuery;
   animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
   CollapseView = Backbone.View.extend({
-    el: '.collapse',
+    el: '.section-collapse',
     events: {
       'click .collapse-next': 'nextItem',
       'click .collapse-prev': 'prevItem',
       'click .collapse-all': 'toggle'
     },
     initialize: function() {
-      var i, item, j, len, model, ref;
+      var i, image, imageSrc, item, j, len, model, ref;
       this.items = this.$('.collapse-item');
+      this.controls = this.$('.collapse-control');
       this.currentItem = 0;
       this.totalItems = this.items.length;
       this.allOpen = false;
@@ -12734,7 +12735,9 @@ return jQuery;
         if (i > 0) {
           $(item).hide();
         }
-        $(item).find('.section-image').css('background-image', "url('http://lorempixel.com/500/400/food/" + (i + 1) + "')");
+        image = $(item).find('.section-image');
+        imageSrc = image.find('img').attr('src');
+        $(item).find('.section-image').css('background-image', "url('" + imageSrc + "')");
         model = new Backbone.Model({
           item: item,
           number: i
@@ -12768,8 +12771,11 @@ return jQuery;
           return this.hide();
         }
       });
-      return next.show().animateCss('slideInRight', {
-        duration: 0.3
+      return next.css('position', 'absolute').css('top', '0').show().animateCss('slideInRight', {
+        duration: 0.3,
+        done: function() {
+          return this.css('position', '').css('top', '');
+        }
       });
     },
     prevItem: function() {
@@ -12791,8 +12797,11 @@ return jQuery;
           return this.hide();
         }
       });
-      return next.show().animateCss('slideInLeft', {
-        duration: 0.3
+      return next.css('position', 'absolute').css('top', '0').show().animateCss('slideInLeft', {
+        duration: 0.3,
+        done: function() {
+          return this.css('position', '').css('top', '');
+        }
       });
     },
     toggle: function() {
@@ -12815,12 +12824,27 @@ return jQuery;
         };
       })(this));
       this.$el.queue('toggle', this.show.bind(this, this.getCurrentItem()));
+      this.$el.queue('toggle', (function(_this) {
+        return function(next) {
+          if (!_this.allOpen) {
+            _this.controls.show().animateCss('flipInX');
+            return next();
+          } else {
+            _this.controls.animateCss('fadeOut', {
+              done: function() {
+                return this.hide();
+              }
+            });
+            return next();
+          }
+        };
+      })(this));
       this.$el.dequeue('toggle').clearQueue();
     },
     show: function(current, next) {
       var delay;
       if (this.allOpen) {
-        return;
+        return next();
       }
       delay = (0.2 + 0.1 + this.totalItems * 0.1) * 1000;
       return setTimeout((function(_this) {
@@ -12841,8 +12865,8 @@ return jQuery;
       })(this));
       $el.removeClass('closed').addClass('open');
       $el.show().animateCss('fadeIn', {
-        duration: 0.2,
-        delay: i * 0.2
+        duration: 0.3,
+        delay: i * 0.1
       });
       next();
     },
