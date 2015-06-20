@@ -13182,7 +13182,7 @@ return jQuery;
 
 }).call(this);
 (function() {
-  var CollapseView, SectionView, animationEndEvents, cv;
+  var CollapseView, VideoView, animationEndEvents;
 
   $('#bgVideo').vide({
     mp4: '/woibbadinga/assets/images/vb.mp4'
@@ -13199,11 +13199,76 @@ return jQuery;
 
   animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
-  SectionView = Backbone.View.extend({
-    el: '.section',
+  VideoView = Backbone.View.extend({
+    el: '#bgVideo',
+    events: {
+      'click .play': 'openVideo'
+    },
     initialize: function() {
-      var image;
-      return image = this.$('.section-image');
+      this.ratio = 0.5588;
+      this.video = this.$('.video');
+      this.iframe = this.video.find('iframe');
+      this.originalHeight = this.$el.height();
+      this.closeBtn = this.$('.fa-times').on('click', this.closeVideo.bind(this));
+      this.resizeVideo();
+      return $(window).on('resize', this.resizeVideo.bind(this));
+    },
+    resizeVideo: function(e) {
+      var height, width;
+      width = this.iframe.parent().width();
+      height = width * this.ratio;
+      console.log(width + " x " + height);
+      this.iframe.attr('height', height + 'px');
+      if (this.video.is(':visible')) {
+        return this.$el.animate({
+          'min-height': height,
+          height: height
+        });
+      }
+    },
+    openVideo: function() {
+      var height, width;
+      width = this.iframe.parent().width();
+      height = width * this.ratio;
+      return this.$el.animate({
+        'min-height': height,
+        height: height
+      }, 'slow', (function(_this) {
+        return function() {
+          _this.video.show().animateCss('fadeIn');
+          _this.post('play');
+          return _this.closeBtn.show();
+        };
+      })(this));
+    },
+    closeVideo: function() {
+      return this.$el.animate({
+        'min-height': this.originalHeight,
+        height: this.originalHeight
+      }, 'slow', (function(_this) {
+        return function() {
+          _this.video.queue(function() {
+            return $(this).animateCss('fadeOut');
+          }).hide();
+          _this.closeBtn.animateCss('fadeOut');
+          return _this.post('unload');
+        };
+      })(this));
+    },
+    triggerPlay: function() {
+      var iframe;
+      return iframe = this.video.find('iframe')[0];
+    },
+    post: function(action, value) {
+      var data, message;
+      data = {
+        method: action
+      };
+      if (value) {
+        data.value = value;
+      }
+      message = JSON.stringify(data);
+      return this.iframe[0].contentWindow.postMessage(data, '*');
     }
   });
 
@@ -13409,6 +13474,10 @@ return jQuery;
     }
   });
 
-  cv = new CollapseView().render();
+  $(document).ready(function() {
+    var cv, vv;
+    vv = new VideoView;
+    return cv = new CollapseView().render();
+  });
 
 }).call(this);

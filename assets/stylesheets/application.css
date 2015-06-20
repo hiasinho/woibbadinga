@@ -5496,26 +5496,45 @@ body {
   position: absolute;
   bottom: 35px;
   width: 100%; }
+  /* line 227, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  #bgVideo .player .fa {
+    cursor: pointer; }
 
-/* line 229, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+/* line 233, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .section-footer {
   background-color: #333;
   color: white; }
-  /* line 234, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  /* line 238, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
   .section-footer > div {
     padding: 20px; }
     @media screen and (min-width: 750px) {
-      /* line 234, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+      /* line 238, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
       .section-footer > div {
         width: 50%;
         display: inline-block; }
-        /* line 241, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+        /* line 245, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
         .section-footer > div:nth-child(1) {
           float: left; }
-        /* line 245, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+        /* line 249, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
         .section-footer > div:nth-child(2) {
           float: right; }
-        /* line 249, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+        /* line 253, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
         .section-footer > div:nth-child(3) {
           width: 100%;
           clear: both; } }
+
+/* line 261, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+.video {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  hight: 100%; }
+  /* line 269, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  .video .fa {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    opacity: 0.5; }
