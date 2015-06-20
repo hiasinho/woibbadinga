@@ -5321,7 +5321,7 @@ body {
   margin-right: auto;
   position: relative;
   background-color: #ccc;
-  min-height: 280px;
+  min-height: 283px;
   overflow: hidden; }
   /* line 20, /Users/hiasdo/.rvm/gems/ruby-2.2.2/gems/bourbon-4.2.3/app/assets/stylesheets/addons/_clearfix.scss */
   .section::after {
@@ -5334,7 +5334,7 @@ body {
   /* line 36, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
   .section .section-image, .section .section-text {
     width: 100%;
-    min-height: 280px;
+    min-height: 283px;
     padding: 20px; }
   /* line 42, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
   .section .section-image {
@@ -5367,7 +5367,7 @@ header.section {
 /* line 79, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .collapse-container {
   position: relative;
-  min-height: 280px; }
+  min-height: 283px; }
 
 /* line 84, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .collapse-item {
@@ -5398,10 +5398,22 @@ header.section {
 
 /* line 112, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .collapse-control {
-  min-height: inherit;
-  height: 50px; }
+  min-height: initial;
+  background-color: black;
+  max-height: 39px;
+  padding: 5px;
+  text-align: center; }
+  /* line 119, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  .collapse-control .fa {
+    cursor: pointer; }
+  /* line 123, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  .collapse-control .collapse-prev {
+    float: left; }
+  /* line 127, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  .collapse-control .collapse-next {
+    float: right; }
 
-/* line 119, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+/* line 134, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .columns.three > div {
   float: left;
   display: block;

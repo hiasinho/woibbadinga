@@ -12751,6 +12751,9 @@ return jQuery;
     },
     nextItem: function() {
       var current, next;
+      if (this.allOpen) {
+        return;
+      }
       current = $(this.items[this.currentItem]);
       if ((this.currentItem + 1) >= this.totalItems) {
         next = $(this.items[0]);
@@ -12771,6 +12774,9 @@ return jQuery;
     },
     prevItem: function() {
       var current, next;
+      if (this.allOpen) {
+        return;
+      }
       current = $(this.items[this.currentItem]);
       if ((this.currentItem - 1) < 0) {
         next = $(this.items[this.totalItems - 1]);
