@@ -5566,25 +5566,31 @@ body {
   background-color: black;
   color: white; }
   /* line 266, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  .section-footer a {
+    color: white; }
+    /* line 268, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+    .section-footer a:hover {
+      color: rgba(255, 255, 255, 0.7); }
+  /* line 273, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
   .section-footer > div {
     padding: 20px; }
     @media screen and (min-width: 750px) {
-      /* line 266, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+      /* line 273, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
       .section-footer > div {
         width: 50%;
         display: inline-block; }
-        /* line 273, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+        /* line 280, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
         .section-footer > div:nth-child(1) {
           float: left; }
-        /* line 277, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+        /* line 284, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
         .section-footer > div:nth-child(2) {
           float: right; }
-        /* line 281, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+        /* line 288, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
         .section-footer > div:nth-child(3) {
           width: 100%;
           clear: both; } }
 
-/* line 289, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+/* line 296, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .video {
   display: none;
   position: absolute;
@@ -5592,7 +5598,7 @@ body {
   top: 0;
   width: 100%;
   hight: 100%; }
-  /* line 297, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  /* line 304, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
   .video .fa {
     position: absolute;
     top: 20px;
@@ -5600,19 +5606,19 @@ body {
     cursor: pointer;
     opacity: 0.5; }
 
-/* line 306, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+/* line 313, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 .navigation {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%; }
-  /* line 312, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  /* line 319, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
   .navigation #toggle-menu.visible {
     color: white; }
-    /* line 314, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+    /* line 321, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
     .navigation #toggle-menu.visible span {
       background-color: white; }
-  /* line 319, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+  /* line 326, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
   .navigation .nav-menu {
     position: fixed;
     top: 0;
@@ -5625,7 +5631,7 @@ body {
     text-align: center;
     padding-top: 100px;
     z-index: 8888; }
-    /* line 328, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+    /* line 335, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
     .navigation .nav-menu li {
       display: block;
       font-size: 2em;
@@ -5633,13 +5639,13 @@ body {
       font-weight: 300;
       text-transform: uppercase; }
       @media screen and (min-width: 750px) {
-        /* line 328, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+        /* line 335, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
         .navigation .nav-menu li {
           font-size: 3em; } }
-    /* line 340, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+    /* line 347, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
     .navigation .nav-menu a {
       color: white; }
-      /* line 343, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
+      /* line 350, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
       .navigation .nav-menu a:hover {
         color: rgba(255, 255, 255, 0.6); }
 
