@@ -13182,7 +13182,7 @@ return jQuery;
 
 }).call(this);
 (function() {
-  var CollapseView, VideoView, animationEndEvents;
+  var CollapseView, VideoView;
 
   $('#bgVideo').vide({
     mp4: '/woibbadinga/assets/images/vb.mp4'
@@ -13196,8 +13196,6 @@ return jQuery;
     posterType: 'jpg',
     resizing: true
   });
-
-  animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
   VideoView = Backbone.View.extend({
     el: '#bgVideo',
@@ -13230,7 +13228,7 @@ return jQuery;
       var height, width;
       width = this.iframe.parent().width();
       height = width * this.ratio;
-      return this.$el.animate({
+      this.$el.animate({
         'min-height': height,
         height: height
       }, 'slow', (function(_this) {
@@ -13240,6 +13238,9 @@ return jQuery;
           return _this.closeBtn.show();
         };
       })(this));
+      return $('html, body').animate({
+        scrollTop: this.$el.offset().top
+      });
     },
     closeVideo: function() {
       return this.$el.animate({
@@ -13395,6 +13396,9 @@ return jQuery;
         };
       })(this));
       this.$el.dequeue('toggle').clearQueue();
+      $('html, body').animate({
+        scrollTop: this.$el.offset().top
+      });
     },
     show: function(current, next) {
       var delay;
@@ -13415,6 +13419,9 @@ return jQuery;
       $el.one('click', (function(_this) {
         return function(e) {
           _this.currentItem = parseInt(e.currentTarget.dataset.number);
+          $('html, body').animate({
+            scrollTop: _this.$el.offset().top
+          });
           return _this.toggle();
         };
       })(this));
@@ -13438,46 +13445,28 @@ return jQuery;
         }
       });
       next();
-    },
-    toggleAll: function() {
-      var $item, i, item, items, j, len, number;
-      items = this.allOpen ? this.items.toArray().reverse() : this.items;
-      for (i = j = 0, len = items.length; j < len; i = ++j) {
-        item = items[i];
-        number = parseInt(item.dataset.number);
-        $item = $(item);
-        if (!this.allOpen) {
-          $item.css('position', 'relative');
-          if (number !== this.currentItem) {
-            $item.addClass('section-small');
-            $item.animateCSS({
-              effect: 'fadeIn',
-              delay: (number * 0.2) + "s"
-            });
-          }
-        } else {
-          if (number !== this.currentItem) {
-            $item.animateCSS({
-              effect: 'fadeOut',
-              delay: (i * 0.1) + "s",
-              done: function() {
-                this.css('position', 'absolute');
-                return this.removeClass('section-small');
-              }
-            });
-          } else {
-
-          }
-        }
-      }
-      return this.allOpen = this.allOpen ? false : true;
     }
   });
 
   $(document).ready(function() {
     var cv, vv;
     vv = new VideoView;
-    return cv = new CollapseView().render();
+    cv = new CollapseView().render();
+    return $('#toggle-menu').click(function(e) {
+      var $this;
+      e.preventDefault();
+      $this = $(this);
+      if ($this.hasClass('visible')) {
+        $('.nav-menu').fadeOut();
+      } else {
+        $('html, body').animate({
+          scrollTop: 0
+        });
+        $('.nav-menu').fadeIn();
+      }
+      $('body').toggleClass('overlay-open');
+      return $this.toggleClass('visible').toggleClass('hidden');
+    });
   });
 
 }).call(this);
