@@ -13184,26 +13184,13 @@ return jQuery;
 (function() {
   var CollapseView, VideoView;
 
-  $('#bgVideo').vide({
-    mp4: '/woibbadinga/assets/images/vb.mp4'
-  }, {
-    volume: 0,
-    playbackRate: 1,
-    muted: true,
-    loop: true,
-    autoplay: true,
-    position: '50% 50%',
-    posterType: 'jpg',
-    resizing: true
-  });
-
   VideoView = Backbone.View.extend({
     el: '#bgVideo',
     events: {
       'click .play': 'openVideo'
     },
     initialize: function() {
-      this.ratio = 0.5588;
+      this.ratio = 0.419;
       this.video = this.$('.video');
       this.iframe = this.video.find('iframe');
       this.originalHeight = this.$el.height();
@@ -13458,11 +13445,13 @@ return jQuery;
       $this = $(this);
       if ($this.hasClass('visible')) {
         $('.nav-menu').fadeOut();
+        $('.nav-menu-sub').fadeOut();
       } else {
         $('html, body').animate({
           scrollTop: 0
         });
         $('.nav-menu').fadeIn();
+        $('.nav-menu-sub').fadeIn();
       }
       $('body').toggleClass('overlay-open');
       return $this.toggleClass('visible').toggleClass('hidden');
