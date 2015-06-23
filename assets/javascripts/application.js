@@ -13226,7 +13226,7 @@ return jQuery;
         };
       })(this));
       return $('html, body').animate({
-        scrollTop: this.$el.offset().top
+        scrollTop: 0
       });
     },
     closeVideo: function() {
