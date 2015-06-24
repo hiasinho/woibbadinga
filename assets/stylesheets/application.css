@@ -5457,7 +5457,6 @@ body {
 /* line 136, /Users/hiasdo/Sites/Pages/kontrast/source/assets/stylesheets/_global.scss */
 #bgVideo {
   background-color: transparent;
-  background-image: url("../images/vff.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contains; }
@@ -5472,7 +5471,7 @@ body {
     transform: translateY(-50%);
     width: 100%;
     font-size: 6em;
-    color: white;
+    color: black;
     text-transform: uppercase;
     text-align: center;
     line-height: 0.9; }

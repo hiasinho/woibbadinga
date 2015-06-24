@@ -13184,6 +13184,19 @@ return jQuery;
 (function() {
   var CollapseView, VideoView;
 
+  $('#bgVideo').vide({
+    mp4: '/woibbadinga/assets/images/vb.mp4'
+  }, {
+    volume: 0,
+    playbackRate: 0.5,
+    muted: true,
+    loop: true,
+    autoplay: true,
+    position: '50% 50%',
+    posterType: 'jpg',
+    resizing: true
+  });
+
   VideoView = Backbone.View.extend({
     el: '#bgVideo',
     events: {
